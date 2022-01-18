@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_EFS.css')}}">
+    <style>
+        @font-face {
+            font-family: Roboto-Light;
+            src: url(./static/Roboto-Light.ttf);
+        }
+    </style>
+
+    <title>EFS</title>
+</head>
+
+<body>
+    <div id="page_global">
+        <!-- Haut de page -->
+        <div id="header">
+            <div id="menu">
+                <img src="./static/logo_EFS.svg" alt="logo" id="logo">
+                <div id="accueil"> <a href="{{ url_for('index') }}"> Accueil </a> </div>
+                <div id="promesse"> <a href="{{ url_for('formulaire') }}"> Don </a></div>
+                <div id="donateurs"> <a href="{{ url_for('donateurs') }}"> Donateurs </a></div>
+            </div>
+            <div id="deco">
+                <img src="./static/sang.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Milieu de page -->
+    {% block milieu %} {% endblock %}
+
+    <!-- Bas de page -->
+    <div id="footer">
+        <div id="text_fin">
+            <p>Mention légales</p>
+            <p>Qui sommes nous</p>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>

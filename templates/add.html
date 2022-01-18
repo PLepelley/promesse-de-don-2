@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+
+{% block milieu%}
+<p>Merci pour votre contribution!</p>
+
+<h2>Information sur les donateurs</h2>
+<ul>
+    {% for donateur in donateurs%}
+    <li> {{ donateur["nom"]}} {{ donateur["prenom"]}} {{ donateur["sang"]}} {{ donateur["mail"]}}</li>
+    {% endfor %}
+    <h3> Total de sang donné : {{somme_sang}} ml</h3>
+</ul>
+
+{% endblock %}

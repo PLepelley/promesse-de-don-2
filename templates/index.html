@@ -1,0 +1,47 @@
+{%extends 'base.html'%}
+
+<!-- Milieu de page -->
+{% block milieu%}
+<div id="milieu">
+    <div id="container">
+        <div id="don">
+            <h2>Je veux donner</h2>
+            <p>
+                1 million de malades est soigné chaque année grâce au don de sang.
+                Moi aussi, je veux sauver des vies !
+                Mais je ne sais pas où me rendre pour donner mon sang.
+                En complétant une promesse de don, je visualise la carte des collectes et sélectionne celle de
+                mon choix pour que l’EFS puisse m’inviter à la prochaine date.<br>
+
+                45 minutes pour sauver une vie :
+            <ol>
+                <li>L'accueil</li>
+                <li>L'entretien</li>
+                <li>Le prélèvement</li>
+                <li>La collation</li>
+            </ol>
+            </p>
+            <button><a href="{{url_for('formulaire')}}">Promesse de don </a></button>
+        </div>
+        <div id="articles">
+            <div id="art1">
+                <h3>En donnant mon sang, <br> je sauve…</h3>
+                <p>
+                    Une femme qui perd beaucoup de sang lors de son accouchement.
+                    Une personne atteinte d’un cancer et que la chimiothérapie affaiblit.
+                    Un enfant souffrant de drépanocytose ou toute autre maladie du sang.
+                    Un accidenté de la route.
+                </p>
+
+            </div>
+            <div id="art2">
+                <h3>Carte des collectes en BFC</h3>
+                <p>Je trouve une collecte proche de chez moi</p>
+                <img src="./static/carte_fr.png" alt="carte">
+                <button> <a href="http://www.cartesfrance.fr/">Accéder à la carte</a></button>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
